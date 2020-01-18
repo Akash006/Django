@@ -22,6 +22,6 @@ urlpatterns = [
     path('eggs/', views.eggs),
     path('', views.homepage),
     path('home/', views.home),
-    path('form/', views.form),
+    path('form/', views.form, name='form'),
     path('count/', views.count, name='count'),
 ]

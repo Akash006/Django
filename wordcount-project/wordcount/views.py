@@ -11,7 +11,10 @@ def form(request):
     return render(request, 'form.html')
 
 def count(request):
-    return render(request, 'count.html')
+    fulltext = request.GET['fulltext']
+    print(fulltext)
+    wordlist = fulltext.split()
+    return render(request, 'count.html' , {'fulltext':fulltext,'count':len(wordlist)})
 
 def eggs(request):
     return HttpResponse('<h1>Eggs are great !</h1>')
